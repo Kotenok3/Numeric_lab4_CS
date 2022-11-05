@@ -1,0 +1,16 @@
+C:\Users\User\Desktop\Project\Учебные\ASU\Numeric_lab4_CS\Numeric_lab4_CS\bin\Debug\net5.0\Numeric_lab4_CS.exe
+C:\Users\User\Desktop\Project\Учебные\ASU\Numeric_lab4_CS\Numeric_lab4_CS\bin\Debug\net5.0\Numeric_lab4_CS.deps.json
+C:\Users\User\Desktop\Project\Учебные\ASU\Numeric_lab4_CS\Numeric_lab4_CS\bin\Debug\net5.0\Numeric_lab4_CS.runtimeconfig.json
+C:\Users\User\Desktop\Project\Учебные\ASU\Numeric_lab4_CS\Numeric_lab4_CS\bin\Debug\net5.0\Numeric_lab4_CS.runtimeconfig.dev.json
+C:\Users\User\Desktop\Project\Учебные\ASU\Numeric_lab4_CS\Numeric_lab4_CS\bin\Debug\net5.0\Numeric_lab4_CS.dll
+C:\Users\User\Desktop\Project\Учебные\ASU\Numeric_lab4_CS\Numeric_lab4_CS\bin\Debug\net5.0\ref\Numeric_lab4_CS.dll
+C:\Users\User\Desktop\Project\Учебные\ASU\Numeric_lab4_CS\Numeric_lab4_CS\bin\Debug\net5.0\Numeric_lab4_CS.pdb
+C:\Users\User\Desktop\Project\Учебные\ASU\Numeric_lab4_CS\Numeric_lab4_CS\obj\Debug\net5.0\Numeric_lab4_CS.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Project\Учебные\ASU\Numeric_lab4_CS\Numeric_lab4_CS\obj\Debug\net5.0\Numeric_lab4_CS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Project\Учебные\ASU\Numeric_lab4_CS\Numeric_lab4_CS\obj\Debug\net5.0\Numeric_lab4_CS.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Project\Учебные\ASU\Numeric_lab4_CS\Numeric_lab4_CS\obj\Debug\net5.0\Numeric_lab4_CS.AssemblyInfo.cs
+C:\Users\User\Desktop\Project\Учебные\ASU\Numeric_lab4_CS\Numeric_lab4_CS\obj\Debug\net5.0\Numeric_lab4_CS.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Project\Учебные\ASU\Numeric_lab4_CS\Numeric_lab4_CS\obj\Debug\net5.0\Numeric_lab4_CS.dll
+C:\Users\User\Desktop\Project\Учебные\ASU\Numeric_lab4_CS\Numeric_lab4_CS\obj\Debug\net5.0\ref\Numeric_lab4_CS.dll
+C:\Users\User\Desktop\Project\Учебные\ASU\Numeric_lab4_CS\Numeric_lab4_CS\obj\Debug\net5.0\Numeric_lab4_CS.pdb
+C:\Users\User\Desktop\Project\Учебные\ASU\Numeric_lab4_CS\Numeric_lab4_CS\obj\Debug\net5.0\Numeric_lab4_CS.genruntimeconfig.cache
