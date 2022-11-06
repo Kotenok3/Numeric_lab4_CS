@@ -28,8 +28,8 @@ namespace Numeric_lab4_CS
             A = new double[n,n];
         }
 
-        public int N => A.GetLength(0);
         public int M => A.GetLength(1);
+        public int N => A.GetLength(0);
 
 
         public double this[int i, int j]
@@ -41,9 +41,8 @@ namespace Numeric_lab4_CS
                 A[i, j] = value;
             }
         }
-
+        
         #region operator
-
         public override string ToString()
         {
             var s = "";

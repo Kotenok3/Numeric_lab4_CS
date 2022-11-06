@@ -5,51 +5,9 @@ namespace Numeric_lab4_CS
 {
     class Program
     {
-        public static double[] TridiagonalAlg(SLE sly, int n)
-        {
-            double[] A = new double[n];
-            double[] B = new double[n];
-            double[] X = new double[n];
-
-
-            A[0] = -sly.A[0, 1] / sly.A[0, 0];
-            B[0] = sly.B[0] / sly.A[0, 0];
-
-            for (int i = 1; i < sly.N; i++)
-            {
-                var z = sly.A[i, i] + A[i - 1] * sly.A[i, i - 1];
-                A[i] = i < sly.N - 1 ? -sly.A[i, i + 1] / z : 0;
-                B[i] = (sly.B[i] - sly.A[i, i - 1] * B[i - 1]) / z;
-            }
-
-            X[n - 1] = B[n - 1];
-
-            for (int i = n-2; i >= 0; i--)
-            {
-                X[i] = A[i] * X[i + 1] + B[i];
-            }
-
-            return X;
-        }
-
-        public static bool CriterStabilityTridiagonalAlg(SLE sly)
-        {
-            for (int i = 1; i < sly.N-1; i++)
-            {
-                if (Math.Abs(sly.A[i, i]) < Math.Abs(sly.A[i, i - 1]) + Math.Abs(sly.A[i, i + 1]))
-                    return false;
-            }
-
-            return true;
-        }
-        
-        
-        
-        
-        
         static void Main(string[] args)
         {
-            double[,] t =
+            double[,] t1 =
             {
                 { 17, 2, 0, 0, 0, 0 },
                 { 1, 18, 4, 0, 0, 0 },
@@ -58,24 +16,37 @@ namespace Numeric_lab4_CS
                 { 0, 0, 0, 5, 21, 3 },
                 { 0, 0, 0, 0, 6, 22 }
             };
+
+            double[,] t2 =
+            {
+                { 17, 2, 0.02, 0.01, 0.01, 0.01 },
+                { 1, 18, 4, 0.01, 0.02, 0.01 },
+                { 0.01, -4, 19, 4, 0.01, 0.02 },
+                { 0.01, 0.02, 7, 20.01, 5, 0.01 },
+                { 0.02, 0.01, 0.01, 5, 21, 3 },
+                { 0.01, 0.01, 0.01, 0.02, 6, 22 }
+            };
+            
             double[] b = { 21, 22, 25, 28, 23, 29 };
 
-            var a = new Matrix(t);
+            var a1 = new Matrix(t1);
 
-            var SLY1 = new SLE(a, b);
+            var SLY1 = new SLE(a1, b);
+                
+            Console.WriteLine("Метод прямой прогонки");
+            Console.WriteLine($"Выполнение условия устойчивости:{Triagonal.CriterStability(SLY1)}");
+            var x1 = new Matrix(Triagonal.SearchSolution(SLY1, SLY1.N));
+            Console.WriteLine("Корни:\n" + x1);
+            Console.WriteLine($"Невязка \n"+(new Matrix(b) - a1 * x1));
 
-            Console.WriteLine($"Выполнение условия устойчивости:{CriterStabilityTridiagonalAlg(SLY1)}");
+            Console.WriteLine("Метод Якоби");
+            var a2 = new Matrix(t1);
+            var SLY2 = new SLE(a2, b);
+            var x2 = new Matrix(Jacobi.SearchSolution(SLY2, 0.0001, new double[b.Length]));
+            Console.WriteLine("Корни:\n" + x2);
+            Console.WriteLine($"Невязка \n"+(new Matrix(b) - a2 * x2));
             
             
-            var x = TridiagonalAlg(SLY1, SLY1.N);
-
-            var X = new Matrix(x);
-
-            Console.WriteLine("Корни:\n" + X);
-
-            Console.WriteLine($"Невязка \n"+(new Matrix(b) - a * X));
-
-
 
             Console.ReadKey();
         }
