@@ -7,8 +7,9 @@ namespace Test
     [TestFixture]
     public class TestsSLY
     {
+        
         [Test]
-        public void Triagonal()
+        public void TriagonalTest()
         {
             double[,] t =
             {
@@ -20,15 +21,42 @@ namespace Test
                 { 0, 0, 0, 0, 6, 22 }
             };
             double[] b = { 21, 22, 25, 28, 23, 29 };
+            double[] ansewrSLY = { 1.1339787, 0.861181053, 1.341190586, 0.740525769, 0.760230102, 1.110846336 };
+            
 
-            double[] ansewr = { 1.1339, 0.8611, 1.3411, 0.7405, 0.7602, 1.1108 };
             var a = new Matrix(t);
             var SLY = new SLE(a, b);
-            var x = Numeric_lab4_CS.Triagonal.SearchSolution(SLY, SLY.N);
+            var x = Triagonal.SearchSolution(SLY, SLY.N);
 
             for (int i = 0; i < x.Length; i++)
             {
-                Assert.AreEqual(x[i],ansewr[i],1e-3);
+                Assert.AreEqual(x[i],ansewrSLY[i],1e-5);
+            }
+
+        }
+        
+        [Test]
+        public void JakobiTest()
+        {
+            double[,] t =
+            {
+                { 17, 2, 0.02, 0.01, 0.01, 0.01 },
+                { 1, 18, 4, 0.01, 0.02, 0.01 },
+                { 0.01, -4, 19, 4, 0.01, 0.02 },
+                { 0.01, 0.02, 7, 20.01, 5, 0.01 },
+                { 0.02, 0.01, 0.01, 5, 21, 3 },
+                { 0.01, 0.01, 0.01, 0.02, 6, 22 }
+            };
+            double[] b = { 21, 22, 25, 28, 23, 29 };
+            double[] ansewrSLY2 = { 1.1339787, 0.861181053, 1.341190586, 0.740525769, 0.760230102, 1.110846336 };
+            
+            var a = new Matrix(t);
+            var SLY = new SLE(a, b);
+            var x = Jacobi.SearchSolution(SLY, 1e-5,new double[b.Length]);
+
+            for (int i = 0; i < x.Length; i++)
+            {
+                Assert.AreEqual(x[i],ansewrSLY2[i],1e-2);
             }
 
         }

@@ -40,7 +40,7 @@ namespace Numeric_lab4_CS
             Console.WriteLine($"Невязка \n"+(new Matrix(b) - a1 * x1));
 
             Console.WriteLine("Метод Якоби");
-            var a2 = new Matrix(t1);
+            var a2 = new Matrix(t2);
             var SLY2 = new SLE(a2, b);
             var x2 = new Matrix(Jacobi.SearchSolution(SLY2, 0.0001, new double[b.Length]));
             Console.WriteLine("Корни:\n" + x2);

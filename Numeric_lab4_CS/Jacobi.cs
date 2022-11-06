@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Numeric_lab4_CS
 {
@@ -17,24 +18,23 @@ namespace Numeric_lab4_CS
                     tempX[i] = sly.B[i];
                     for (int j = 0; j < x.Length; j++)
                     {
-                        tempX[i] -= sly.A[i, j] * x[j];
+                        if(i != j)
+                            tempX[i] -= sly.A[i, j] * x[j];
                     }
 
                     tempX[i] /= sly.A[i, i];
                 }
 
-                norm = Math.Abs(x[0] - tempX[0]);
-                for (int i = 1; i < x.Length; i++)
-                {
-                    if (Math.Abs(x[i] - tempX[i]) > norm) norm = Math.Abs(x[i] - tempX[i]);
-
-                    x[i] = tempX[i];
-                }
-
+                int k = 0;
+                norm = tempX.Select(z => Math.Abs(z-x[k++])).Max();
+                k = 0;
+                tempX.CopyTo(x, 0);    
+                  
+                
                 count++;
                 
             } while (norm > esp);
-            
+            Console.WriteLine($"count:{count}, esp:{esp}");
             return x;
         }
     }
