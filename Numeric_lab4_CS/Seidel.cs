@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Numeric_lab4_CS
 {
-    public class Jacobi
+    public static class Seidel
     {
         public static double[] SearchSolution(SLУ sly,double esp, double[] x)
         {
@@ -19,7 +19,7 @@ namespace Numeric_lab4_CS
                     for (int j = 0; j < x.Length; j++)
                     {
                         if(i != j)
-                            tempX[i] -= sly.A[i, j] * x[j];
+                            tempX[i] -= sly.A[i, j] * tempX[j];
                     }
 
                     tempX[i] /= sly.A[i, i];
@@ -37,5 +37,6 @@ namespace Numeric_lab4_CS
             Console.WriteLine($"count:{count}, esp:{esp}");
             return x;
         }
+
     }
 }

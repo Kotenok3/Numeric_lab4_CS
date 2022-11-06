@@ -4,7 +4,7 @@ namespace Numeric_lab4_CS
 {
     public static class Triagonal
     {
-        public static double[] SearchSolution(SLE sly, int n)
+        public static double[] SearchSolution(SLУ sly, int n)
         {
             double[] A = new double[n];
             double[] B = new double[n];
@@ -30,7 +30,7 @@ namespace Numeric_lab4_CS
             return X;
         }
         
-        public static bool CriterStability(SLE sly)
+        public static bool CriterStability(SLУ sly)
         {
             for (int i = 1; i < sly.N-1; i++)
             {
