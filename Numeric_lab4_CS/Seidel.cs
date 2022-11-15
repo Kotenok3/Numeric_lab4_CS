@@ -25,9 +25,7 @@ namespace Numeric_lab4_CS
                     tempX[i] /= sly.A[i, i];
                 }
 
-                int k = 0;
-                norm = tempX.Select(z => Math.Abs(z-x[k++])).Max();
-                k = 0;
+                norm = Enumerable.Range(0, tempX.Length).Select(i => Math.Abs(tempX[i] - x[i])).Max();
                 tempX.CopyTo(x, 0);    
                   
                 
@@ -36,6 +34,12 @@ namespace Numeric_lab4_CS
             } while (norm > esp);
             Console.WriteLine($"count:{count}, esp:{esp}");
             return x;
+        }
+        
+
+        public static Double Norm(Matrix B)
+        {
+            return Enumerable.Range(0, B.M).Select(i => Math.Abs(B[0, i])).Max();
         }
 
     }

@@ -4,6 +4,7 @@ namespace Numeric_lab4_CS
 {
     public static class Triagonal
     {
+        //Метод прямой прогонки
         public static double[] SearchSolution(SLУ sly, int n)
         {
             double[] A = new double[n];

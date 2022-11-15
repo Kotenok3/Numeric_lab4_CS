@@ -7,6 +7,8 @@ namespace Numeric_lab4_CS
     {
         public static double[] SearchSolution(SLУ sly,double esp, double[] x)
         {
+            double esp1 = Math.Abs(1 - Norm(sly.B)) / Norm(sly.B) * esp;
+
             double norm;
             int count = 0;
             double[] tempX = new double[x.Length];
@@ -25,17 +27,20 @@ namespace Numeric_lab4_CS
                     tempX[i] /= sly.A[i, i];
                 }
 
-                int k = 0;
-                norm = tempX.Select(z => Math.Abs(z-x[k++])).Max();
-                k = 0;
+                norm = Enumerable.Range(0, tempX.Length).Select(i => Math.Abs(tempX[i] - x[i])).Max();
                 tempX.CopyTo(x, 0);    
                   
                 
                 count++;
                 
-            } while (norm > esp);
-            Console.WriteLine($"count:{count}, esp:{esp}");
+            } while (norm > esp1 && count < 1000);
+            Console.WriteLine($"count:{count}, esp:{esp}, esp1:{esp1}");
             return x;
+        }
+
+        public static Double Norm(double[] B)
+        {
+            return Math.Sqrt(Enumerable.Range(0, B.Length).Sum(i => B[i]*B[i]));
         }
     }
 }
