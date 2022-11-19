@@ -73,7 +73,7 @@ namespace Numeric_lab4_CS
 
         public static Matrix operator +(Matrix A, Matrix B)
         {
-            var C = new Matrix(A.N);
+            var C = new Matrix(A.N,A.M);
 
             for (int i = 0; i < A.N; i++)
             {
@@ -87,7 +87,7 @@ namespace Numeric_lab4_CS
         
         public static Matrix operator -(Matrix A, Matrix B)
         {
-            var C = new Matrix(A.N);
+            var C = new Matrix(A.N,A.M);
 
             for (int i = 0; i < A.N; i++)
             {
@@ -100,7 +100,7 @@ namespace Numeric_lab4_CS
         }
         public static Matrix operator -(Matrix A, double[] b)
         {
-            var C = new Matrix(A.N);
+            var C = new Matrix(A.N,A.M);
 
             for (int i = 0; i < A.N; i++)
             {
@@ -114,7 +114,7 @@ namespace Numeric_lab4_CS
         
         public static Matrix operator *(Matrix A, Matrix B)
         {
-            var C = new Matrix(A.N);
+            var C = new Matrix(A.N,A.M);
             
             for (int i = 0; i < A.N; i++)
             {
@@ -132,7 +132,7 @@ namespace Numeric_lab4_CS
         
         public static Matrix operator *(Matrix A, double[] b)
         {
-            var C = new Matrix(A.N);
+            var C = new Matrix(A.N,A.M);
 
             for (int i = 0; i < A.N; i++)
             {
@@ -146,7 +146,7 @@ namespace Numeric_lab4_CS
         
         public static Matrix operator *(Matrix A, double c)
         {
-            var C = new Matrix(A.N);
+            var C = new Matrix(A.N,A.M);
 
             for (int i = 0; i < A.N; i++)
             {

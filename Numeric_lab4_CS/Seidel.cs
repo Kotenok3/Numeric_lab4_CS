@@ -9,6 +9,7 @@ namespace Numeric_lab4_CS
         {
             double norm;
             int count = 0;
+            var esp2 = Norm(sly.A) * esp;
             double[] tempX = new double[x.Length];
 
             do
@@ -32,15 +33,50 @@ namespace Numeric_lab4_CS
                 count++;
                 
             } while (norm > esp);
-            Console.WriteLine($"count:{count}, esp:{esp}");
+            Console.WriteLine($"count:{count}, esp:{esp}, esp2{esp2}");
             return x;
         }
         
 
-        public static Double Norm(Matrix B)
+        public static double Norm(Matrix B)
         {
-            return Enumerable.Range(0, B.M).Select(i => Math.Abs(B[0, i])).Max();
+            var B1 = new double[B.N, B.N];
+            var B2 = new double[B.N, B.N];
+
+            for (int i = 0; i < B.N; i++)
+            {
+                for (int j = 0; j < B.M; j++)
+                {
+                    if (i < j)
+                    {
+                        B2[i, j] = B[i, j]/B[i,i];
+                    }
+                    else if (i > j)
+                    {
+                        B1[i, j] = B[i, j]/B[i,i];
+                    }
+                }
+            }
+            
+            var normB1 = CalculationNorm(new Matrix(B1));
+            var normB2 = CalculationNorm(new Matrix(B2));
+            
+            return (1 - normB1) / normB2;
         }
+        public static double CalculationNorm(Matrix B)
+        {
+            double[] norm = new double[B.M];
+            for (int j = 0; j < B.M; j++)
+            {
+                for (int i = 0; i < B.N; i++)
+                {
+                    norm[j] += B[i, j];
+                }
+            }
+
+            return norm.Max();
+        }
+        
 
     }
 }

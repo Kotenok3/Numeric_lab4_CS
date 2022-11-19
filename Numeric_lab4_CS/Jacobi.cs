@@ -7,7 +7,7 @@ namespace Numeric_lab4_CS
     {
         public static double[] SearchSolution(SLУ sly,double esp, double[] x)
         {
-            double esp1 = Math.Abs(1 - Norm(sly.B)) / Norm(sly.B) * esp;
+            double esp1 = (1 - Norm(GetMatrixB(sly.A))) / Norm(GetMatrixB(sly.A)) * esp;
 
             double norm;
             int count = 0;
@@ -38,9 +38,32 @@ namespace Numeric_lab4_CS
             return x;
         }
 
-        public static Double Norm(double[] B)
+        private static Matrix GetMatrixB(Matrix A)
         {
-            return Math.Sqrt(Enumerable.Range(0, B.Length).Sum(i => B[i]*B[i]));
+            var b = new double[A.N, A.M];
+            for (int i = 0; i < A.N; i++)
+            {
+                for (int j = 0; j < A.M; j++)
+                {
+                    b[i, j] = A[i, j] / A[i, i];
+                }
+            }
+
+            return new Matrix(b);
+        }
+        
+        public static double Norm(Matrix B)
+        {
+            double[] norm = new double[B.M];
+            for (int j = 0; j < B.M; j++)
+            {
+                for (int i = 0; i < B.N; i++)
+                {
+                    norm[j] += B[i, j];
+                }
+            }
+
+            return norm.Min();
         }
     }
 }

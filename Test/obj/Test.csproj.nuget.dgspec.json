@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\klyuev.402\\source\\repos\\Kotenok3\\Numeric_lab4_CS\\Test\\Test.csproj": {}
+    "C:\\Users\\User\\Desktop\\Project\\Учебные\\ASU\\Numeric_lab4_CS\\Test\\Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\klyuev.402\\source\\repos\\Kotenok3\\Numeric_lab4_CS\\Numeric_lab4_CS\\Numeric_lab4_CS.csproj": {
+    "C:\\Users\\User\\Desktop\\Project\\Учебные\\ASU\\Numeric_lab4_CS\\Numeric_lab4_CS\\Numeric_lab4_CS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\klyuev.402\\source\\repos\\Kotenok3\\Numeric_lab4_CS\\Numeric_lab4_CS\\Numeric_lab4_CS.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Project\\Учебные\\ASU\\Numeric_lab4_CS\\Numeric_lab4_CS\\Numeric_lab4_CS.csproj",
         "projectName": "Numeric_lab4_CS",
-        "projectPath": "C:\\Users\\klyuev.402\\source\\repos\\Kotenok3\\Numeric_lab4_CS\\Numeric_lab4_CS\\Numeric_lab4_CS.csproj",
-        "packagesPath": "C:\\Users\\klyuev.402\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\klyuev.402\\source\\repos\\Kotenok3\\Numeric_lab4_CS\\Numeric_lab4_CS\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\Project\\Учебные\\ASU\\Numeric_lab4_CS\\Numeric_lab4_CS\\Numeric_lab4_CS.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Project\\Учебные\\ASU\\Numeric_lab4_CS\\Numeric_lab4_CS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\klyuev.402\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -58,24 +58,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\klyuev.402\\source\\repos\\Kotenok3\\Numeric_lab4_CS\\Test\\Test.csproj": {
+    "C:\\Users\\User\\Desktop\\Project\\Учебные\\ASU\\Numeric_lab4_CS\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\klyuev.402\\source\\repos\\Kotenok3\\Numeric_lab4_CS\\Test\\Test.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Project\\Учебные\\ASU\\Numeric_lab4_CS\\Test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "C:\\Users\\klyuev.402\\source\\repos\\Kotenok3\\Numeric_lab4_CS\\Test\\Test.csproj",
-        "packagesPath": "C:\\Users\\klyuev.402\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\klyuev.402\\source\\repos\\Kotenok3\\Numeric_lab4_CS\\Test\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\Project\\Учебные\\ASU\\Numeric_lab4_CS\\Test\\Test.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Project\\Учебные\\ASU\\Numeric_lab4_CS\\Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\klyuev.402\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -90,8 +90,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\klyuev.402\\source\\repos\\Kotenok3\\Numeric_lab4_CS\\Numeric_lab4_CS\\Numeric_lab4_CS.csproj": {
-                "projectPath": "C:\\Users\\klyuev.402\\source\\repos\\Kotenok3\\Numeric_lab4_CS\\Numeric_lab4_CS\\Numeric_lab4_CS.csproj"
+              "C:\\Users\\User\\Desktop\\Project\\Учебные\\ASU\\Numeric_lab4_CS\\Numeric_lab4_CS\\Numeric_lab4_CS.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Project\\Учебные\\ASU\\Numeric_lab4_CS\\Numeric_lab4_CS\\Numeric_lab4_CS.csproj"
               }
             }
           }
@@ -108,7 +108,7 @@
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.9.4, )"
+              "version": "[17.5.0-preview-20221003-04, )"
             },
             "NUnit": {
               "target": "Package",
@@ -138,7 +138,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }
